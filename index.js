@@ -102,8 +102,8 @@ function Baby(name, age, favoriteToy) {
 
 Baby.prototype = Object.create(Person.prototype);
 
-Baby.prototype.play = function () {
-  return `Playing with ${favoriteToy}`;
+Baby.prototype.play = function (favoriteToy) {
+  return this.favoriteToy + `Playing with ${favoriteToy}`;
 }
 
 
@@ -111,10 +111,13 @@ Baby.prototype.play = function () {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  
+  The this keyword is used to bind methods to a specific object.  This is done through 4 types of binding.
+  1.  Window/Console : a global scope, objects not declared
+  2.  Implicit Binding : objects are declared
+  3.  New Binding : new operator with constructor
+  4.  Explicit Binding : Uses the call and apply methods 
+        Call takes arguements separately, apply takes arguement as an array.
 */
 
 
